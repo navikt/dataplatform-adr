@@ -48,6 +48,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 * Bra fordi verktøyet lar oss skrive samme SDK i alle applikasjoner uansett hvor data skal sendes. Dette gjør det enklere for utviklere å gjenbruke kode og kunnskap når de bytter produkt-team.
 * Bra fordi verktøyet lar behandlingsansvarlig eie dataene sine og overføre de til et utvalg av populære tjenester for webanalyse som f.eks Google Analytics, Amplitude og Hotjar.
+* Dårlig fordi NAV må først utføre en datavask før data sendes til Amplitude, og dette krever utvikling og drift av en proxy-løsning
 * Dårlig fordi verktøyet er dyrt og vil i lengden tilnærme seg kostnadene av et egetutviklet verktøy med samme formål og teknologi.
 * Dårlig fordi verktøyet ikke har innebygd måling av økter (sessions). Må kanskje utvikles hos NAV eller bruke en SDK i tillegg som f.eks Amplitude.
 
@@ -57,11 +58,12 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 * Bra fordi verktøyet er hendelses-basert og lar utviklere innsamle og sette opp målinger med enkle spørringer i verktøyet. Verktøyet har en datamodell som er enkel å forholde seg til.
 * Bra fordi verktøyet er bygget på moderne teknologier som gjør sammenstilling av data enkelt uansett hvilken teknologi det er laget med, f.eks nettsider, native-applikasjoner og applikasjoner som ikke er laget for internett.
+* Dårlig fordi NAV må først utføre en datavask før data sendes til Amplitude, og dette krever utvikling og drift av en proxy-løsning
 * Dårlig fordi vi må skrive om innsamling av data fra produktene dersom vi bytter ut Amplitude, eller ønsker å bruke mer enn et verktøy. NAV bruker allerede flere verktøy som Google Analytics, Google Tag Manager, Hotjar, App Dynamics og Adrum. Mye av denne koden er i kodebasen til apper. Vi må ha en plan for å støtte flere verktøy, men det må være enkelt å endre koden som brukes til datainnsamling.
 
 ### [option 3]
 
-[Rudder](https://github.com/rudderlabs/rudder-server) | åpen kilde verktøy for dataflyt i nettsky hos GCP, AWS og Azure
+[Rudder](https://github.com/rudderlabs/rudder-server) | åpen kilde variant av segment
 
 * Bra fordi et åpen kilde verktøy (Open Source Software) som styres av NAV i sin egen konto hos f.eks Google Cloud lar NAV kontrollere fullstendig hvilke data samles inn i henhold til lovverk og egne behov
 * Bra fordi verktøyet er et åpen kilde alternativ til Segment og  NAV skal støtte åpen kilde som prinsipp
@@ -70,12 +72,12 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ### [option 4]
 
-[Event Layer](https://github.com/kidGodzilla/event-layer) | åpen kilde verktøy for dataflyt i nettsky hos GCP, AWS og Azure
+[Event Layer](https://github.com/kidGodzilla/event-layer) | åpen kilde fork av Segment
 
-* Bra fordi et åpen kilde verktøy (Open Source Software) som styres av NAV i sin egen konto hos f.eks Google Cloud lar NAV kontrollere fullstendig hvilke data samles inn i henhold til lovverk og egne behov
-* Bra fordi verktøyet er et åpen kilde alternativ til Segment og  NAV skal støtte åpen kilde som prinsipp
-* Dårlig fordi det vil kreve ressurser internt hos NAV til å drifte miljøet og utvikle det som mangler i forhold til produkter på markedet, f.eks å sende data til Hotjar. Dette er ressurser som NAV kan bruke til andre oppgaver. Man må regne på om dette er billigere enn å betale for Segment når man tar driftskostnader og lønn til ansatte i betraktning.
-* Dårlig fordi det bruker en ny lisens kalt Server Side Public License som kan være juridisk krevende dersom NAV oppfattes som konkurrent. Det pågår en [juridisk diskusjon](https://opensource.stackexchange.com/questions/7522/sspl-and-the-open-source-definition) om denne lisensen påfører brukere obligasjoner de ellers ikke ville hatt med lisenser som GPL og MIT. Så lenge NAV ikke oppfattes som konkurrent så skal denne lisensen være tilsvarende de fleste OSS lisenser, dvs. at de kan bruke lisensen fritt men med forventning om at de bidrar tilbake til prosjektet Rudder-server.
+* Bra fordi det er et enkelt åpenkilde bibliotek for å samle inn data fra nettsider til flere datakilder som Google Analytics og Amplitude
+* Bra fordi det kan skreddersys til egne behov hos NAV.
+* Dårlig fordi det kun støtte innsamling av data fra nettleser. Om det skal støtte fagsystemer og applikasjoner som ikke er laget for internett så må NAV utvikle et HTTP API for å sende data til Event Layer.
+* Dårlig fordi det ikke støtter å sende data til leverandører som Hotjar. Hvis NAV bruker Event Layer så må vi utvikle dette selv.
 
 ## Links <!-- optional -->
 

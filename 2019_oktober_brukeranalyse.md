@@ -48,7 +48,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 * Bra fordi verktøyet lar oss skrive samme SDK i alle applikasjoner uansett hvor data skal sendes. Dette gjør det enklere for utviklere å gjenbruke kode og kunnskap når de bytter produkt-team.
 * Bra fordi verktøyet lar behandlingsansvarlig eie dataene sine og overføre de til et utvalg av populære tjenester for webanalyse som f.eks Google Analytics, Amplitude og Hotjar.
-* Dårlig fordi NAV må først utføre en datavask før data sendes til Amplitude, og dette krever utvikling og drift av en proxy-løsning
+* Dårlig fordi NAV må først utføre en datavask før data sendes til Segment, og dette krever utvikling og drift av en proxy-løsning
 * Dårlig fordi verktøyet er dyrt og vil i lengden tilnærme seg kostnadene av et egetutviklet verktøy med samme formål og teknologi.
 * Dårlig fordi verktøyet ikke har innebygd måling av økter (sessions). Må kanskje utvikles hos NAV eller bruke en SDK i tillegg som f.eks Amplitude.
 

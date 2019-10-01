@@ -63,7 +63,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 ### [option 3]
 
-[Rudder](https://github.com/rudderlabs/rudder-server) | åpen kilde variant av segment
+[Rudder](https://github.com/rudderlabs/rudder-server) | åpen kilde verktøy for dataflyt i nettsky hos GCP, AWS og Azure
 
 * Bra fordi et åpen kilde verktøy (Open Source Software) som styres av NAV i sin egen konto hos f.eks Google Cloud lar NAV kontrollere fullstendig hvilke data samles inn i henhold til lovverk og egne behov
 * Bra fordi verktøyet er et åpen kilde alternativ til Segment og  NAV skal støtte åpen kilde som prinsipp

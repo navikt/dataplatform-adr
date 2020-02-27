@@ -8,6 +8,7 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 ## Context and Problem Statement
 
+
 For at NAV skal kunne lage gode tjenester trenger vi innsikt om hvordan tjenester blir brukt. Hvilke produkter er enkle for brukere, og hvor møter de utfordringer? For å løse dette trenger vi verktøy til å gjøre målinger og innsamling av data enkelt. NAV har også ansvar for å sørge for at data som innsamles er i tråd med lover og regler for offentlige aktører, og må derfor tilpasse innsamling av data deretter. For eksempel må vi regne med at vi har flere vurderinger i fremtiden om planer for tjenesteutvikling i forhold til krav om personvern. Derfor er ikke alle spørsmål om dette temaet avklart på forhånd før vi inngår en avtale med leverandør.
 
 Bør NAV velge å lage disse verktøyene selv, kjøpe fra leverandør-markedet, eller kombinere? Hvor langt bør NAV gå for å lage en god verktøykasse for egne ansatte, og bør NAV vurdere å lage noe som hele offentlig sektor kan ta i bruk som Open Source Software? 
